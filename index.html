@@ -1,9 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cove Properties STL</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Arial, sans-serif;
+      color: #222;
+      background: #f9fafc;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background: #0B5FFF;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    header h1 { margin: 0; font-size: 2rem; }
+    header p { margin: .25rem 0 0; font-size: 1.1rem; opacity: 0.9; }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    main h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    main p {
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+      font-size: 1.1rem;
+      color: #555;
+    }
+    .cta {
+      display: inline-block;
+      background: #0B5FFF;
+      color: white;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .cta:hover { background: #094bcc; }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+      background: #f1f3f7;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello from Cove Properties STL!</h1>
+  <header>
+    <h1>Cove Properties STL</h1>
+    <p>Invest • Renovate • Manage</p>
+  </header>
+
+  <main>
+    <h2>Welcome</h2>
+    <p>
+      We acquire, renovate, and manage properties across the St. Louis area with precision and care.  
+      From first-look investments to long-term management, Cove Properties delivers results you can trust.
+    </p>
+    <a class="cta" href="mailto:info@covepropertiesstl.com">Contact Us</a>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Cove Properties STL. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
