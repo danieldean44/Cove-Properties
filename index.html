@@ -3,24 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cove Properties</title>
+
+  <title>Cove Properties STL</title>
+  <meta name="description" content="Invest • Renovate • Manage in St. Louis." />
+  <meta name="theme-color" content="#111111" />
+
+  <!-- Open Graph / iMessage preview -->
+  <meta property="og:title" content="Cove Properties STL" />
+  <meta property="og:description" content="Invest • Renovate • Manage in St. Louis." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://covepropertiesstl.com/" />
+  <meta property="og:image" content="https://covepropertiesstl.com/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter card (also used by some apps) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cove Properties STL" />
+  <meta name="twitter:description" content="Invest • Renovate • Manage in St. Louis." />
+  <meta name="twitter:image" content="https://covepropertiesstl.com/og-image.jpg" />
+
+  <!-- Icons -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Optional: small perf hint so the logo appears instantly -->
+  <link rel="preload" as="image" href="/logo.png" />
+
   <style>
+    :root{
+      --cream: #f4f0ea;   /* exact from your logo background */
+      --ink: #111111;     /* near-black used in your mark */
+      --ink-2: #333333;   /* hover / secondary text */
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; }
     body {
-      margin: 0;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      background: #f4f0ea; /* cream background like your logo */
-      color: #222;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--cream);
+      color: var(--ink);
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      line-height: 1.6;
     }
     header {
       text-align: center;
-      padding: 2rem 1rem 1rem;
+      padding: 2rem 1rem 0.5rem; /* tightened bottom padding */
     }
     header img {
-      max-width: 160px;
+      max-width: 170px;
       height: auto;
+      display: inline-block;
     }
     main {
       flex: 1;
@@ -29,60 +63,62 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 2rem;
+      padding: 1.5rem;
     }
-    main h1 {
-      font-size: 2.5rem;
-      margin: 1rem 0 0.5rem;
-      color: #111;
-      font-weight: 700;
+    h1 {
+      font-size: clamp(1.9rem, 3.8vw, 2.6rem);
+      margin: 0.5rem 0 0.5rem; /* tightened top margin */
+      font-weight: 800;
+      letter-spacing: .2px;
     }
-    main p {
-      max-width: 640px;
-      margin: 0 auto 2rem;
-      font-size: 1.15rem;
-      color: #444;
-      line-height: 1.6;
+    p.lead {
+      max-width: 700px;
+      margin: 0 auto 1.75rem;
+      font-size: 1.12rem;
+      color: var(--ink-2);
     }
     .cta {
       display: inline-block;
-      background: #111; /* black button */
-      color: #f5f3ef;
+      background: var(--ink);
+      color: var(--cream);
       text-decoration: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
-      font-weight: 600;
-      transition: background 0.2s;
+      padding: 0.78rem 1.4rem;
+      border-radius: 8px;
+      font-weight: 700;
+      transition: background .2s ease;
     }
-    .cta:hover { background: #333; }
+    .cta:hover { background: var(--ink-2); }
+
     footer {
       text-align: center;
       padding: 1rem;
-      font-size: 0.9rem;
-      color: #666;
+      font-size: 0.95rem;
+      color: var(--ink-2);
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Cove Properties logo" />
+    <!-- Make sure /logo.png exists in the repo root -->
+    <img src="/logo.png" alt="Cove Properties logo" />
   </header>
 
   <main>
-    <h1>Cove Properties</h1>
-    <p>
-      We acquire, renovate, and manage properties across the St. Louis area with precision and care.  
+    <h1>Cove Properties STL</h1>
+    <p class="lead">
+      We acquire, renovate, and manage properties across the St. Louis area with precision and care.
       From first-look investments to long-term management, Cove Properties delivers results you can trust.
     </p>
     <a class="cta" href="mailto:info@covepropertiesstl.com">Contact Us</a>
   </main>
 
   <footer>
-    © <span id="year"></span> Cove Properties, LLC. All rights reserved.
+    © <span id="year"></span> Cove Properties STL. All rights reserved.
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    // Auto year
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
