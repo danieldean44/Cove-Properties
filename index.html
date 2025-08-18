@@ -55,6 +55,7 @@
       max-width: 300px;
       height: auto;
       display: inline-block;
+      width: min(300px, 70vw); /* responsive cap */
     }
     main {
       flex: 1;
@@ -100,7 +101,15 @@
 <body>
   <header>
     <!-- Make sure /logo.png exists in the repo root -->
-    <img src="/logo.png" alt="Cove Properties logo" />
+    <img
+      src="/logo.png"
+      alt="Cove Properties logo"
+      width="2048"
+      height="2048"
+      loading="eager"
+      fetchpriority="high"
+      class="logo"
+    />
   </header>
 
   <main>
